@@ -4,34 +4,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center" tools:context=".MainActivity">
+    android:padding="24dp"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fitting Lookup"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btnScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Fitting Code"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etManualQrCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Or enter code manually"
+        android:inputType="text"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btnSubmitManual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scan QR Code"
-        android:layout_marginBottom="24dp"/>
+        android:text="Submit Code"
+        android:layout_marginBottom="32dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginBottom="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Quality Simulation"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- THIS BUTTON HAS BEEN CORRECTED -->
+    <Button
+        android:id="@+id/btnGenerateReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate AI Engineering Report"
+        android:padding="12dp" />
 
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ready to scan..."
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp"/>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="Fitting details will appear here."
-            android:lineSpacingExtra="4dp"/>
-    </ScrollView>
+        android:layout_marginTop="32dp"
+        android:text="Ready..."
+        android:textSize="18sp"/>
 
 </LinearLayout>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FittingDetailActivity">
+
+    <!-- This ScrollView will contain all the content that needs to scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnAddInspection"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- AI Summary Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ai_summary_background"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI-Generated Summary"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAiSummary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/white"
+                    tools:text="This fitting is operational, but a recent inspection noted minor corrosion requiring maintenance." />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QR Code"
+                android:textSize="12sp"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/tvDetailQrCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                tools:text="ABC-123-XYZ" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendor"
+                android:textSize="12sp"
+                android:alpha="0.7"/>
+
+            <TextView
+                android:id="@+id/tvDetailVendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"
+                tools:text="MegaCorp Fittings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lot Number"
+                android:textSize="12sp"
+                android:alpha="0.7"/>
+
+            <TextView
+                android:id="@+id/tvDetailLotNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"
+                tools:text="MC-2024-A5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Warranty Expiry"
+                android:textSize="12sp"
+                android:alpha="0.7"/>
+
+            <TextView
+                android:id="@+id/tvDetailWarranty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp"
+                tools:text="2029-08-01" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspection History"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInspections"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_inspection" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- This button stays fixed at the bottom -->
+    <Button
+        android:id="@+id/btnAddInspection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:text="Add New Inspection" />
+
+</RelativeLayout>
+

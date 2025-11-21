@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddInspectionActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Inspection"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inspector Name" />
+
+    <EditText
+        android:id="@+id/etInspectorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter your name"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result" />
+
+    <RadioGroup
+        android:id="@+id/rgResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pass" />
+
+        <RadioButton
+            android:id="@+id/rbFail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fail" />
+
+        <RadioButton
+            android:id="@+id/rbRequiresMaintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requires-Maintenance" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes (Optional)" />
+
+    <EditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Add any relevant notes..."
+        android:minLines="3"
+        android:gravity="top"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSubmitInspection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Inspection" />
+
+</LinearLayout>
